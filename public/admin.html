@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard | MAS</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+    margin: 0;
+    padding: 20px;
+  }
+  h1 { color: #38bdf8; text-align: center; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  th, td {
+    border: 1px solid #38bdf8;
+    padding: 10px;
+    text-align: left;
+  }
+  th { background-color: #1e293b; }
+  tr:nth-child(even) { background-color: #111827; }
+</style>
+</head>
+<body>
+
+<h1>MAS Applications Dashboard</h1>
+
+<table id="appsTable">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Message</th>
+    <th>Date</th>
+  </tr>
+</table>
+
+<script>
+async function loadApplications() {
+  try {
+    const res = await fetch("/api/applications");
+    if (!res.ok) throw new Error("Failed to fetch applications");
+    const data = await res.json();
+    const table = document.getElementById("appsTable");
+
+    data.forEach(app => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${app.name}</td>
+        <td>${app.email}</td>
+        <td>${app.message}</td>
+        <td>${new Date(app.date).toLocaleString()}</td>
+      `;
+      table.appendChild(row);
+    });
+  } catch (err) {
+    console.error(err);
+    document.body.innerHTML += "<p style='color:red'>Error loading applications.</p>";
+  }
+}
+
+loadApplications();
+</script>
+
+</body>
+</html>

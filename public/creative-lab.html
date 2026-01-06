@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creative Lab | MODREN AGE SYMBOL</title>
+<style>
+body {
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#0f172a;
+  color:white;
+  text-align:center;
+}
+.navbar {
+  display:flex;
+  justify-content:space-between;
+  padding:15px 30px;
+  background:rgba(2,6,23,0.9);
+  position:sticky;
+  top:0;
+}
+.nav-logo {color:#38bdf8;font-weight:bold;font-size:22px;}
+.nav-links a {color:#e5e7eb;margin-left:20px;text-decoration:none;}
+.nav-links a:hover {color:#38bdf8;}
+section {padding:60px 20px;}
+h1{font-size:36px;color:#38bdf8;}
+p{max-width:700px;margin:auto;line-height:1.6;color:#d1d5db;}
+.cta-button {
+  display:inline-block;padding:12px 28px;margin-top:20px;
+  background:#38bdf8;color:#0f172a;font-weight:bold;
+  border-radius:8px;text-decoration:none;
+  transition: transform 0.3s, background 0.3s;
+}
+.cta-button:hover {transform:scale(1.05); background:#0ea5e9;}
+section:hover {
+  box-shadow: 0 0 40px rgba(56,189,248,0.15);
+  transition: 0.4s;
+}
+</style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-logo">MAS</div>
+<div class="nav-links">
+  <a href="../index.html">Home</a>
+  <a href="#about">About</a>
+  <a href="#features">Features</a>
+  <a href="#contact">Apply</a>
+</div>
+</nav>
+
+<section id="hero">
+  <h1 data-en="Creative Lab" data-ar="مختبر الإبداع">Creative Lab</h1>
+  <p style="color:#9ca3af; font-size:14px;">
+Creative Design & Branding Division of MODREN AGE SYMBOL
+</p>
+  <p data-en="Design, branding, and UI/UX by MAS team."
+     data-ar="التصميم، الهوية البصرية وتجربة المستخدم من فريق MAS.">
+     Design, branding, and UI/UX by MAS team.
+  </p>
+  <a href="#contact" class="cta-button" data-en="Apply Now" data-ar="قدّم الآن">Apply Now</a>
+</section>
+<!-- Popup -->
+<div class="popup-overlay" id="popup">
+  <div class="popup-box">
+    <span class="close-btn" id="closePopup">×</span>
+
+    <h2>Apply to MAS</h2>
+<form 
+  action="https://formspree.io/f/mojvdlgn" 
+  method="POST"
+  id="contactForm">
+
+  <input 
+    type="text"
+    name="name"
+    data-en-placeholder="Your Name"
+    data-ar-placeholder="الاسم"
+    placeholder="Your Name"
+    required
+  >
+
+  <input 
+    type="email"
+    name="email"
+    data-en-placeholder="Your Email"
+    data-ar-placeholder="البريد الإلكتروني"
+    placeholder="Your Email"
+    required
+  >
+
+  <textarea
+    name="message"
+    data-en-placeholder="Write your message"
+    data-ar-placeholder="اكتب رسالتك"
+    placeholder="Write your message"
+    required
+  ></textarea>
+
+  <button 
+    type="submit"
+    class="cta-button"
+    data-en="Send"
+    data-ar="إرسال">
+    Send
+  </button>
+
+</form>
+<div id="successMessage" style="display:none;">
+  Your message has been sent successfully. We will contact you soon.
+</div>
+  </div>
+</div>
+<section id="about">
+  <h2 data-en="About Creative Lab" data-ar="عن مختبر الإبداع">About Creative Lab</h2>
+  <p data-en="This lab focuses on creating cutting-edge UI/UX designs and branding solutions for modern digital projects."
+     data-ar="يركز المختبر على إنشاء تصاميم واجهات وتجربة مستخدم متقدمة وحلول هوية بصرية للمشاريع الرقمية الحديثة.">
+     This lab focuses on creating cutting-edge UI/UX designs and branding solutions for modern digital projects.
+  </p>
+</section>
+
+ <section id="services">
+  <h2 data-en="What We Do" data-ar="ماذا نقدم">What We Do</h2>
+
+  <p data-en="Brand Identity Design" data-ar="تصميم الهوية البصرية">✔ Brand Identity Design</p>
+  <p data-en="UI / UX Design" data-ar="تصميم واجهات وتجربة المستخدم">✔ UI / UX Design</p>
+  <p data-en="Creative Direction" data-ar="الإخراج الإبداعي">✔ Creative Direction</p>
+  <p data-en="Visual Systems" data-ar="الأنظمة البصرية">✔ Visual Systems</p>
+
+</section>
+<section id="why">
+  <h2>Why MAS?</h2>
+  <p>
+    MAS combines creativity, technology, and modern thinking
+    to deliver real impact and long-term value.
+  </p>
+</section>
+<section id="cta">
+  <h2>Interested?</h2>
+  <p data-en="Let’s craft bold visual identities together."
+   data-ar="لنصنع هويات بصرية جريئة معًا.">
+Let’s craft bold visual identities together.
+</p>
+  <a href="../index.html#contact" class="cta-button">
+    Contact MAS
+  </a>
+</section>
+
+<footer>
+  <p>© 2026 MODREN AGE SYMBOL — All rights reserved</p>
+</footer>
+</body>
+</html>
