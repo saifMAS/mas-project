@@ -43,7 +43,7 @@
 <script>
 async function loadApplications() {
   try {
-    const res = await fetch("/api/applications");
+    const res = await fetch("https://YOUR-RENDER-APP.onrender.com/api/applications")
     if (!res.ok) throw new Error("Failed to fetch applications");
     const data = await res.json();
     const table = document.getElementById("appsTable");
